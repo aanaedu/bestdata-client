@@ -7,14 +7,14 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start-dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "ng build --prod",
-    "start-prod": "http-server dist/ -P https://bestdatang.herokuapp.com"
+    "start": "http-server dist/ -P https://bestdatang.herokuapp.com"
   },
   "private": true,
   "dependencies": {
