@@ -15,7 +15,7 @@
     "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "ng build --prod",
     "start": "http-server dist/ -P https://bestdatang.herokuapp.com",
-    "ghpages": "ng build --prod && git subtree push --prefix dist origin gh-pages"
+    "gh-pages": "ng build --prod && git subtree push --prefix dist origin gh-pages"
   },
   "private": true,
   "dependencies": {
