@@ -1,0 +1,19 @@
+<app-content [title]="pageTitle">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default" *ngIf="student">
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Student Number</strong>: {{ student.studentNumber}}</li>
+                <li class="list-group-item"><strong>Name</strong>: {{ student.firstName }} {{ student.lastName }}</li>
+                <li class="list-group-item"><strong>Gender</strong>: {{ student.gender}}</li>
+                <li class="list-group-item"><strong>Date of Birth</strong>: {{ student.dateOfBirth | date}}</li>
+                <li class="list-group-item"><strong>Phone Number</strong>: {{ student.phoneNumber}}</li>
+                <li class="list-group-item"><strong>Email</strong>: {{ student.email}}</li>
+                <li class="list-group-item"><strong>Address</strong>: {{ student.address}}</li>
+              </ul>
+            </div>
+          </div>
+    </div>
+  </div>
+</app-content>

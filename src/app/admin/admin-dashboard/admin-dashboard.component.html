@@ -1,0 +1,95 @@
+<h1 class="page-header">Welcome, {{ currentUser.firstName }}</h1>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-primary text-center">
+      <div class="panel-heading">
+        <h1>2,098</h1>
+        <h4>Sessions</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-info text-center">
+      <div class="panel-heading">
+        <h1>1,748</h1>
+        <h4>Users</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-success text-center">
+      <div class="panel-heading">
+        <h1>6,790</h1>
+        <h4>Page Views</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-warning text-center">
+      <div class="panel-heading">
+        <h1>55,890</h1>
+        <h4>Students</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row m-t-40">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="m-b-0">Welcome {{ currentUser.firstName }}</h4>
+        <small class="text-muted m-t-0">you have 4 new messages</small>
+      </div>
+    </div>
+    <ul class="media-list m-t-20">
+      <li class="media" *ngFor="let message of messages">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNWZhNDY5MWZjOCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1ZmE0NjkxZmM4Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
+                 data-holder-rendered="true" style="width: 64px; height: 64px;">
+          </a>
+        </div>
+        <div class="media-body">
+          <h5 class="media-heading"><strong>{{ message.name }}</strong></h5>
+          <span>{{ message.subject }}<br>
+            <small>{{ message.time }}</small>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <div class="card-body bg-light">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="m-b-0">March 2017</h4>
+          <small class="text-muted m-t-0">Report for this month</small></div>
+      </div>
+    </div>
+    <div class="table-responsive m-t-20">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th>NAME</th>
+          <th>STATUS</th>
+          <th>DATE</th>
+          <th>PRICE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of tableData; let i=index;">
+          <td class="text-center">{{ i + 1 }}</td>
+          <td class="txt-oflo">{{item.companyName}}</td>
+          <td><span class="label label-success label-rouded">{{ item.status }}</span></td>
+          <td class="txt-oflo">{{item.date}}</td>
+          <td><span class="text-success">{{ item.price }}</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

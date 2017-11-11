@@ -1,0 +1,49 @@
+<app-content [title]="pageTitle">
+  <form [formGroup]="form" (submit)="onSubmit()" class="form-horizontal" autocomplete="off" role="form" novalidate>
+      <div class="alert alert-danger" *ngIf="form.controls.errors">
+        <p *ngFor="let error of form.errors"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+          <input type="text" id="firstName" formControlName="firstName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" id="lastName" formControlName="lastName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" id="email" formControlName="email" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" id="password" formControlName="password" class="form-control" [required]="action !== actionType.Edit">
+        </div>
+      </div>
+      <div class="form-group" *ngIf="action === actionType.Edit">
+        <label for="isAdmin" class="col-sm-2 control-label">User Type</label>
+        <div class="col-sm-10">
+          <select class="form-control" formControlName="isAdmin" id="isAdmin">
+            <option value="true">Admin</option>
+            <option value="false">User</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+          <button type="submit" class="btn" [class.btn-success]="form.valid || action === actionType.Edit" [disabled]="!form.valid && action !== actionType.Edit">{{ submitBtnText }}</button>
+        </div>
+      </div>
+
+    </form>
+    <a routerLink="/admin/users" role="button" *ngIf="!user">Back to Users List</a>
+</app-content>

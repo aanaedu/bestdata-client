@@ -1,0 +1,16 @@
+<app-content [title]="pageTitle">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="panel panel-default" *ngIf="user">
+              <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><strong>Name</strong>: {{ user.firstName }} {{ user.lastName }}</li>
+                  <li class="list-group-item"><strong>Email</strong>: {{ user.email}}</li>
+                  <li class="list-group-item"><strong>Has Admin Rights</strong>: {{ user.isAdmin}}</li>
+                </ul>
+              </div>
+            </div>
+      </div>
+    </div>
+  </app-content>
+  
