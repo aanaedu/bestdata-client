@@ -1,6 +1,11 @@
 # BestData - Client
 An app for managing basic student information.
 
+#### Links
+
+[Server](https://bestdata.herokuapp.com)
+[Client](https://bestdatang.herokuapp.com)
+
 #### What you will find:
 - Authentication and Authorisation
 -- Admin and (Data Entry) User
@@ -19,4 +24,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
